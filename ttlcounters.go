@@ -95,8 +95,8 @@ func (cache *TTLCache) startCleanupTimer() {
 	})()
 }
 
-// NewTTLCache is a helper to create instance of the TTLCache struct
-func NewTTLCache(duration time.Duration) *TTLCache {
+// New is a helper to create instance of the TTLCache struct
+func New(duration time.Duration) *TTLCache {
 	cache := &TTLCache{
 		ttl:   duration,
 		items: map[string]*Item{},
